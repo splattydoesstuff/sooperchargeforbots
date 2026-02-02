@@ -103,7 +103,7 @@ The command structure is GENERALLY a **17-byte packet**.
 
 ## 🤝 Contributing & Credits
 
-**Credits:**
+**Big thanks to:**
 
 * **u/revned911 (Reddit):** For initial findings on the BLE topic.
 * **u/CunningLogic (Reddit):** For their research and unpacking work on DRM-protected (Jiagu360) versions of the app.
