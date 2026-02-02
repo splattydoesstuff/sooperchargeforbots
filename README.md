@@ -1,8 +1,8 @@
 # SOOPERCHARGE your little friend
 ![alt text](https://github.com/SlyFox-Asia/looi-soopercharged/blob/ebfa4fc97cf09908a15f0afcbd31393fc01ab911/SOOPERCHARGE.png)
 
-**Project SOOPERCHARGE** is the first comprehensive Reverse Engineering and Modification project for the **LOOI Robot**.
-This repository hosts documentation, decompiled logic analysis, packet captures, and more.
+**Project SOOPERCHARGE** is the first comprehensive improvement project for the **LOOI Robot**.
+This repository only hosts useful documentation to the autonomous study of the Robot's functioning.
 
 This README has been co-writed with the help of AI. All content being read here has then been reviewed multiple times by an human (me). I ain't got hours to write, please bear with me.
 
@@ -12,9 +12,9 @@ Reverse engineering is generally legal in the EU under the Software Directive (D
 
 ## About the app.
 
-The stock LOOI application locks several features behind server-side configurations and hardware sensors. Through targeted Smali code manipulation, I have successfully bypassed some of these limits. As a response to my work, starting from the 2.6.1 update, TangibleFuture has implemented a paid (and expensive) version of the Jiagu 360 packer and obfuscator, making code on those versions inaccessible. Jiagu 360 was already implemented in older versions, but due to its configuration, it was not impacting code access in any way.
+The stock LOOI application locks several features behind server-side configurations and hardware sensors. Through targeted Smali code manipulation, I have successfully bypassed some of these limits. As a response to my work, starting from the 2.6.1 update, TangibleFuture has implemented a paid (and expensive) version of the Jiagu 360 packer and obfuscator, making code on those versions much harder to access. Jiagu 360 was already implemented in older versions, but due to its configuration, it was not impacting code access in any way.
 
-### Updater Bypass
+### Update Check Bypass
 
 To permanently disable the forced update mechanism and prevent the application from hanging on the splash screen, I modified the version comparison logic within `UpgradeManager$tryUpgrade$2.smali`. The original code compared the server version integer against the local version using a conditional branch (`if-le`). I patched this instruction by replacing it with an unconditional jump (`goto`), forcing the execution flow to always bypass the "Update Available" logic. This hardwires the application to execute the "No Update Needed" callback path every time, allowing the splash screen to dismiss normally regardless of the actual server version.
 This allows to run any version of the app without worrying about updates.
@@ -51,7 +51,7 @@ LOOI operates on a sequence-based BLE protocol. It is not a simple direct-drive 
 
 ### Connection Handshake
 
-Unfortunately, you cannot simply connect via NRF Connect and start sending commands immediately. The robot requires a handshake sequence initiated by the official app - I have found it in the app's source code, but haven't actually analyzed it yet. If this handshake is missing, LOOI will disconnect after a few seconds.
+Unfortunately, you cannot simply connect via NRF Connect and start sending commands immediately. The robot requires a handshake sequence initiated by the official app - If this handshake is missing, LOOI will disconnect after a few seconds.
 
 Connect via the official app first, background it (do not kill it), then connect from NRF connect. :-)
 
@@ -82,7 +82,7 @@ The command structure is GENERALLY a **17-byte packet**.
 | **15** | `00` | **RES** | Reserved. |
 | **16** | `02` | **END/CRC** | Footer or Checksum. |
 
-### Known Characteristics & UUIDs (Incomplete, I'll add the rest soon I promise)
+### Known Characteristics & UUIDs (Incomplete)
 
 | UUID Prefix | Function | Notes |
 | --- | --- | --- |
@@ -98,8 +98,6 @@ The command structure is GENERALLY a **17-byte packet**.
 ## 📂 Repository Contents
 
 * **/ble_sniffed**: Contains captured payloads from my sessions. You can try them out by yourself with the NRF Connect app for Android devices.
-* **/leaks**: Content found within the APKs that did not make it to production (yet). Not everything will be here since I wouldn't like a DMCA from TangibleFuture.
-* **/audio**: Extracted sound files from the LOOI app.
 
 ---
 
@@ -108,12 +106,13 @@ The command structure is GENERALLY a **17-byte packet**.
 **Credits:**
 
 * **u/revned911 (Reddit):** For initial findings on the BLE topic.
+* **u/CunningLogic (Reddit):** For their research and unpacking work on DRM-protected (Jiagu360) versions of the app.
 
 **Want to contribute?**
 This project is active and I am looking for help! If you have experience with:
 
 * Android Reverse Engineering (Smali/Kotlin)
 * Bluetooth Low Energy packet analysis
-* LLM Prompt Injection / API hooking
+* LLM Prompt Injection
 
 Please contact me personally on **Telegram: @SplattyDoesStuff**. I am looking forward to working with anyone who has more competence than me, especially on the code side!
