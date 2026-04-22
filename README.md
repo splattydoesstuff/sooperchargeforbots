@@ -1,7 +1,11 @@
 # SOOPERCHARGE your little friend
+
+**Project SOOPERCHARGE** is the first comprehensive improvement project for various Android-ran robots. Currently, this project has only researched information about the **LOOI Robot**.
+
+# SOOPERCHARGE for LOOI Robot
+
 ![alt text](https://github.com/SlyFox-Asia/looi-soopercharged/blob/ebfa4fc97cf09908a15f0afcbd31393fc01ab911/SOOPERCHARGE.png)
 
-**Project SOOPERCHARGE** is the first comprehensive improvement project for the **LOOI Robot**.
 This repository only hosts useful documentation to the autonomous study of the Robot's functioning.
 
 This README has been co-writed with the help of AI. All content being read here has then been reviewed multiple times by an human (me). I ain't got hours to write, please bear with me.
