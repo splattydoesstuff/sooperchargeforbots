@@ -7,8 +7,14 @@
 ![alt text](https://github.com/SlyFox-Asia/looi-soopercharged/blob/ebfa4fc97cf09908a15f0afcbd31393fc01ab911/SOOPERCHARGE.png)
 
 This repository only hosts useful documentation to the autonomous study of the Robot's functioning.
+To comply with TangibleFuture's terms of service, sharing of modified files and decompiled source code is paused.
+Being kind and respectful is the key to wonderful work!
 
-This README has been co-writed with the help of AI. All content being read here has then been reviewed multiple times by an human (me). I ain't got hours to write, please bear with me.
+From this point on, this README has been co-writed with the help of AI.
+All content being read here has then been reviewed multiple times by an human (me).
+I ain't got hours to write, please bear with me.
+
+AI tools have been used to speed up and ASSIST (not replace) myself in the reverse engineering of the robot.
 
 Reverse engineering is generally legal in the EU under the Software Directive (Directive 2009/24/EC), allowing it for interoperability, security analysis, and error correction, provided specific conditions are met and it doesn't unduly harm the original software's market or infringe on patents/trade secrets.
 
