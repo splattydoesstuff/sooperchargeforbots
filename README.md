@@ -7,7 +7,8 @@
 ![alt text](https://github.com/SlyFox-Asia/looi-soopercharged/blob/ebfa4fc97cf09908a15f0afcbd31393fc01ab911/SOOPERCHARGE.png)
 
 This repository only hosts useful documentation to the autonomous study of the Robot's functioning.
-To comply with TangibleFuture's terms of service, sharing of modified files and decompiled source code is paused.
+To comply with TangibleFuture's terms of service, PUBLIC sharing of modified files and decompiled source code is paused.
+Private sharing through the invite-only SOOPERCHARGE Discord Server is still possible.
 Being kind and respectful is the key to wonderful work!
 
 From this point on, this README has been co-writed with the help of AI.
