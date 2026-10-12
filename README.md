@@ -49,7 +49,7 @@ The stock application artificially restricts Remote Control usage by monitoring 
 
 ### About LLM REing
 
-It is fully possible on 2.5.0 and managed to use my local model with a modded client and a custom made proxy. More details on the SOOPERCHARGE Discord server.
+It is fully possible on 2.5.0 and newer (both stt method and rtc method) and managed to use my local model with a modded client and a partial custom server. More details on the SOOPERCHARGE Discord server.
 
 ---
 
