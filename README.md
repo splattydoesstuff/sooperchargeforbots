@@ -72,25 +72,6 @@ The command structure is GENERALLY a **17-byte packet**.
 **Reference Command (Rotate and turn led red - it's a custom command, you're welcome to try it):**
 `00 07 00 FF 05 00 00 00 00 64 02 0A 96 02 14 00 02`
 
-**Packet Breakdown (Inaccurate, but a decent reference):**
-
-| Byte Index | Value (Hex) | Field Name | Description |
-| --- | --- | --- | --- |
-| **0** | `00` | **SEQ** | Rolling Sequence Counter (00-FF). Must increment or packet is dropped. |
-| **1** | `07` | **OPCODE** | The Command Type, I still have to figure it out |
-| **2** | `00` | **SUB_OP** | Sub-command or mode modifier. |
-| **3** | `FF` | **MASK_A** | Target System Mask A. |
-| **4** | `05` | **MASK_B** | Target System Mask B. |
-| **5-8** | `00..00` | **PAYLOAD** | 4-Byte Data Block. |
-| **9** | `64` | **VALUE** | Magnitude/Speed. `64` (Hex) = 100 (Decimal). |
-| **10** | `02` | **PARAM_1** | Auxiliary Parameter 1. |
-| **11** | `0A` | **PARAM_2** | Auxiliary Parameter 2. |
-| **12** | `96` | **DURATION** | Execution time in ticks/ms (`96` = 150). |
-| **13** | `02` | **PARAM_3** | Context specific. |
-| **14** | `14` | **PARAM_4** | Context specific. |
-| **15** | `00` | **RES** | Reserved. |
-| **16** | `02` | **END/CRC** | Footer or Checksum. |
-
 ### Known Characteristics & UUIDs (Incomplete)
 
 | UUID Prefix | Function | Notes |
